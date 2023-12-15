@@ -5,11 +5,11 @@ const app = express();
 
 // const cors = require("cors");
 const {Server} = require('socket.io');
-
+const http = require("http");
 
 // const PORT = 5000;
 
-
+const http_server = http.createServer(app);
 // app.use(cors())
 
 
