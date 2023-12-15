@@ -1,7 +1,7 @@
 const express = require("express");
 const {Server} = require('socket.io');
 const http = require("http");
-// const app = express();
+const app = express();
 app.get("/", (req, res) => {
   res.send("Express on Vercel");
 });
