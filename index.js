@@ -54,9 +54,9 @@ io.on("connection",(socket) => {
     
 
 })
-// http_server.get("/", (req,res) => {
-//     res.send("hi"):
-// });
+http_server.get("/", (req,res) => {
+    res.send("hi"):
+});
 
 http_server.listen(PORT,() => {
     
