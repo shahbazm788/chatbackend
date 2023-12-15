@@ -2,6 +2,17 @@ const express = require("express");
 
 const app = express();
 
+
+const cors = require("cors");
+const {Server} = require('socket.io');
+const http = require("http");
+
+// const PORT = 5000;
+
+
+app.use(cors())
+const http_server = http.createServer(app);
+
 app.get("/", (req, res) => {
   res.send("Express on Vercel");
 });
