@@ -5,32 +5,27 @@ const app = express();
 
 const cors = require("cors");
 const {Server} = require('socket.io');
-const http = require("http");
+
 
 // const PORT = 5000;
 
 
 app.use(cors())
-const http_server = http.createServer(app);
-
-// app.get("/", (req, res) => {
-//   res.send("Express on Vercel");
-// });
 
 
-
-http_server.get("/", (req, res) => {
+app.get("/", (req, res) => {
   res.send("Express on Vercel");
 });
-// app.listen(5000, () => {
-//   console.log("Running on port 5000.");
-// });
 
-http_server.listen(5000, () => {
+
+
+app.listen(5000, () => {
   console.log("Running on port 5000.");
 });
+
+
 // Export the Express API
-module.exports = http_server;
+module.exports = app;
 
 // const express = require("express");
 // const app = express();
